@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="✨ Flashcard Quiz"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="150dp"
+        android:layout_gravity="center"/>
+
+
+<androidx.cardview.widget.CardView
+    android:layout_width="300dp"
+    android:layout_height="250dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="40dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="12dp"
+
+    >
+
+
+    <FrameLayout
+        android:id="@+id/frm1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/cardFront"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvFrontLabel"
+                android:text="Quetion"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvQuestion"
+                android:text="What is the capital of France ?"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/cardBack"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvBackLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Answer"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp" />
+
+            <TextView
+                android:id="@+id/tvAnswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paris"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:gravity="center" />
+        </LinearLayout>
+
+
+
+
+    </FrameLayout>
+
+</androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="Show Answer"
+        android:textColor="#8B2EFF" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"
+        >
+
+        <Button
+            android:id="@+id/btnPrev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="◀ Previous"
+            android:textAllCaps="false"
+            android:layout_margin="6dp"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#8B2EFF"
+            />
+
+        <ImageButton
+            android:id="@+id/add"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:src="@drawable/outline_add_24"
+            android:backgroundTint="#00BB2F"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_circle"
+            />
+
+        <ImageButton
+            android:id="@+id/edit"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:src="@drawable/edit_icon"
+            android:backgroundTint="#1D51ED"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_circle"
+            />
+        <ImageButton
+            android:id="@+id/delete"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/delete_24px"
+            android:backgroundTint="#DB1C46"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_circle"
+            />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Next ▶"
+            android:textAllCaps="false"
+            android:layout_margin="6dp"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#8B2EFF"/>
+
+    </LinearLayout>
+
+</LinearLayout>
